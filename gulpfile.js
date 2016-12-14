@@ -28,8 +28,8 @@ gulp.task('copylibs', function(){
 gulp.task('typescript', function(){
   return gulp
     .src(tsSrc + "**/*.ts")
-    .pipe(soourcemaps.init())
-    .pipe(typescript(tsconfig.compilerOptions))
+    .pipe(sourcemaps.init())
+    .pipe(typescript(tscConfig.compilerOptions))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(appSrc + 'js/'));
 });
